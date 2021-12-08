@@ -13,30 +13,22 @@ const counterWords = [
   ];
   
 
-let counter = (param) =>{
-    let cont = 0
-    for (let i = 0; i <counterWords.length; i++){
-        if (param === counterWords[i]){
-            cont += 1
-        }
-    } console.log (cont)
-}
-counter (counterWords)
 
+
+let repeatCounter = (data) => {
+    data.sort(); 
+    let words = []
   
-let repeatCounter = (data) =>{
-        data.forEach((word, index, array)=>{
-        let firstIndex = array.indexOf(word)
-        let lastIndex = array.lastIndexOf(word)
-        if (firstIndex !== lastIndex){
-            console.log(word + " is duplicated " + " X " + " times")
-        } else {
-            console.log(word + " is not duplicated")
-        }
-    }) 
-} 
+    for(let i = 0; i< data.length; i++){
+      if(data[i] === data[i+1]){
+         if(words[words.length -1] !== data[i]){
+            words.push(data[i])
+         }
+      } 
+    }
+    console.log(words);
+  }
+  repeatCounter (counterWords)
 
-repeatCounter(counterWords)
-
-
-
+let finalList = (counterWords - words)
+console.log(finalList)
