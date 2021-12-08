@@ -14,21 +14,19 @@ const counterWords = [
   
 
 
-
-let repeatCounter = (data) => {
-    data.sort(); 
-    let words = []
-  
-    for(let i = 0; i< data.length; i++){
-      if(data[i] === data[i+1]){
-         if(words[words.length -1] !== data[i]){
-            words.push(data[i])
-         }
-      } 
+let repeatCounter = (data) =>{
+    for (let i =0; i<data.length; i++){
+        let count = 0;
+        if (data[i] === data [i+1]){
+            count += 1
+        } if (count >= 2) {
+            console.log (data[i] + " is " + count + " times repeated")
+        } else {console.log(data[i] + " is not repeated")}
     }
-    console.log(words);
-  }
-  repeatCounter (counterWords)
+}
 
-let finalList = (counterWords - words)
-console.log(finalList)
+repeatCounter (counterWords)
+
+
+
+
